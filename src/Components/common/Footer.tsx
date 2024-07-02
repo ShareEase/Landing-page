@@ -4,7 +4,7 @@ import React from "react";
 
 const HomeFooter = () => {
   return (
-    <div className="flex flex-col items-center space-y-16 px-[8%] pt-[5%]">
+    <div className="flex flex-col items-center space-y-16 px-[8%] pt-[5%] 2xl:px-[12%]">
       <div className="flex w-full flex-col gap-y-8  lg:flex-row lg:gap-x-24">
         <div className="flex w-full flex-col gap-y-8 lg:w-1/2">
           <div className="w-3/5 sm:w-2/5 lg:w-3/5 xl:w-2/5">
@@ -28,12 +28,12 @@ const HomeFooter = () => {
               {[
                 {
                   icon: "facebook",
-                  url: "https://www.facebook.com/people/Parhlai/61558369453378/",
+                  url: "",
                 },
-                { icon: "instagram", url: "https://www.instagram.com/parhlai" },
+                { icon: "instagram", url: "" },
                 {
                   icon: "linkedin",
-                  url: "https://www.linkedin.com/company/parhlai",
+                  url: "",
                 },
                 // { icon: "twitter", url: "https://twitter.com/example" },
               ].map((platform, index) => (
@@ -69,7 +69,7 @@ const HomeFooter = () => {
             {
               title: "Support",
               links: [
-                { title: "Contact Us", url: "/contact" },
+                { title: "Contact Us", url: "/" },
                 { title: "Report a Bug", url: "/" },
                 { title: "Request Feature", url: "/" },
               ],
@@ -77,20 +77,20 @@ const HomeFooter = () => {
             {
               title: "Legal",
               links: [
-                { title: "Privacy Policy", url: "/privacy-policy" },
-                { title: "Terms & Conditions", url: "/terms-of-service" },
+                { title: "Privacy Policy", url: "/" },
+                { title: "Terms & Conditions", url: "/" },
               ],
             },
           ].map((section, index) => (
             <div key={index} className="flex flex-col gap-y-6 lg:gap-y-8">
-              <p className="whitespace-nowrap lg:text-3xl font-bold">
+              <p className="whitespace-nowrap lg:text-xl font-bold">
                 {section.title}
               </p>
               {section.links.map((link, index) => (
                 <Link
                   key={index}
                   href={link.url}
-                  className="md:text-xl lg:text-2xl"
+                  className="md:text-xl lg:text-lg"
                 >
                   {link.title}
                 </Link>
@@ -100,7 +100,7 @@ const HomeFooter = () => {
         </div>
       </div>
       <div className="flex h-[56px] w-full flex-col items-center justify-center">
-        <p className="text-center lg:text-2xl">
+        <p className="text-center lg:text-xl">
           © 2024, Share Ease. All rights reserved.
         </p>
       </div>
